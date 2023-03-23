@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f9fafb;
+}
+
+/* Universal Styles */
+
+.btn {
+  padding: 6px 12px;
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input:focus {
+  outline: 1px solid rgb(134, 130, 238);
+}
+
+/* custom Styles */
+
+#main_container {
+  display: flex;
+  /* border: 1px solid teal; */
+  width: 100%;
+  height: auto;
+}
+
+#lhs {
+  /* border: 1px solid red; */
+  width: 16%;
+  border-right: 1px solid #e5e7eb;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  padding: 20px;
+}
+
+#rhs {
+  /* border: 1px solid black; */
+  margin-left: 16%;
+  width: 84%;
+  height: auto;
+}
+
+#navbar {
+  /* border: 1px solid black; */
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding: 0 40px;
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#admin_icon_div {
+  display: inline;
+  color: white;
+  font-weight: bold;
+  position: relative;
+}
+
+#admin_icon_div > span {
+  width: 20px;
+  height: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: violet;
+  border-radius: 50%;
+}
+
+#rhs_body {
+  margin: 30px;
+  border-radius: 8px;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  padding: 30px;
+}
+
+#title_div {
+  display: flex;
+  /* border: 1px solid black; */
+  padding: 0 10px;
+  /* align-items: center; */
+  margin-bottom: 40px;
+}
+
+#logo {
+  width: 50px;
+}
+
+#logo > img {
+  width: 100%;
+}
+
+#title_div > h4 {
+  margin-left: 10px;
+  margin-top: 3px;
+  font-weight: 600;
+}
+
+.link_item {
+  display: flex;
+  /* border: 1px solid black; */
+  border-radius: 3px;
+  padding: 7px 15px;
+  align-items: center;
+  margin-bottom: 3px;
+  cursor: pointer;
+}
+
+.link_item:hover {
+  background-color: #f3f4f6;
+}
+
+.link_active {
+  color: rgb(134, 130, 238);
+  background-color: #f3f4f6;
+}
+
+.link_item > p {
+  padding-left: 15px;
+}
+
+.link_item > i {
+  min-width: 20px;
+}
+
+.page {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+#rhs_body h4 {
+  font-weight: 500;
+  /* margin-bottom: 30px; */
+}
+
+/* Product page styles */
+
+#products_page .header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+#add_product::before {
+  content: "\2b";
+  font-family: "FontAwesome";
+  margin-right: 7px;
+}
+
+.action_div {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+table {
+  /* border: 1px solid black; */
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  /* table-layout: auto; */
+}
+
+table thead tr {
+  font-size: 13px;
+  font-weight: 300;
+  color: grey;
+  height: 40px;
+  border-bottom: 1px solid #e5e7eb;
+  border-top: 1px solid #e5e7eb;
+}
+
+table thead tr th {
+  /* border: 1px solid red; */
+}
+
+td,
+th {
+  padding: 5px;
+}
+
+table thead tr th:nth-child(1) {
+  width: 6%;
+}
+
+table tbody tr td:nth-child(1) {
+  padding: 10px;
+  /* border: 1px solid red; */
+}
+
+table thead tr th:nth-child(2) {
+  width: 54%;
+}
+
+table thead tr th:nth-child(3),
+table thead tr th:nth-child(4),
+table thead tr th:nth-child(5),
+table thead tr th:nth-child(6) {
+  width: 10%;
+  text-align: center;
+}
+
+table tbody tr td:nth-child(3),
+table tbody tr td:nth-child(4),
+table tbody tr td:nth-child(5),
+table tbody tr td:nth-child(6) {
+  width: 10%;
+  text-align: center;
+}
+
+table tbody tr {
+  font-size: 13px;
+  font-weight: 400;
+  color: black;
+  height: 70px;
+  border-bottom: 1px solid #e5e7eb;
+  border-top: 1px solid #e5e7eb;
+}
+
+.edit_icon {
+  border: 1px solid #e5e7eb;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 7px;
+}
+
+#product_tbody img {
+  width: 100%;
+}
+
+.status_active {
+  color: white;
+  background-color: rgb(39, 177, 39);
+  border: none;
+  padding: 3px 7px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.status_inactive {
+  color: white;
+  background-color: rgb(238, 68, 68);
+  border: none;
+  padding: 3px 7px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.del_icon {
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+
+.del_icon:hover {
+  color: rgb(238, 68, 68);
+}
+.btn:hover {
+  background-color: whitesmoke;
+}
+
+#logout_drop {
+  display: none;
+  border: 1px solid #e5e7eb;
+  min-width: 200px;
+  height: auto;
+  background-color: white;
+  border-radius: 7px;
+  position: absolute;
+  right: 0;
+  top: 41px;
+  padding: 5px;
+  color: black;
+}
+
+#logout_drop span {
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+#admin_icon_div:hover #logout_drop {
+  display: block;
+}
+
+.icon_line {
+  display: flex;
+  padding: 5px 10px;
+  /* border: 1px solid #e5e7eb; */
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.icon_line:hover {
+  background-color: whitesmoke;
+}
+
+#logout_btn {
+  color: rgb(238, 68, 68);
+}
+
+/* ******************* */
+#orders_page h4 {
+  margin-bottom: 30px;
+}
+/* ******************* */
+
+/* customer Page table styling */
+#customers_page > table thead tr th:nth-child(1),
+#customers_page > table thead tr th:nth-child(2),
+#customers_page > table thead tr th:nth-child(3),
+#customers_page > table thead tr th:nth-child(5),
+#customers_page > table thead tr th:nth-child(6) {
+  width: 15%;
+  text-align: center;
+}
+#customers_page > table thead tr th:nth-child(4) {
+  width: 25%;
+}
+#customers_page > table tbody tr {
+  height: 30px;
+  text-align: center;
+}
+#customers_page > h4 {
+  margin-bottom: 30px;
+}
+
+/* Discount Page Styles */
+
+#discounts_page h4 {
+  margin-bottom: 30px;
+}
+
+#discounts_page tr > th:nth-child(1) {
+  /* background-color: red; */
+  width: 25%;
+}
+
+#discounts_page tr > th:nth-child(2) {
+  /* background-color: red; */
+  width: 25%;
+}
+
+#discounts_page tr > th:nth-child(2) ~ th {
+  /* background-color: red; */
+  table-layout: auto;
+  text-align: center;
+}
+
+#discounts_page tbody tr {
+  height: 40px;
+}
+
+#add_coupon span {
+  padding-left: 7px;
+}

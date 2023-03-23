@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/24c494a6b6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./styles/dashboard.css" />
+    <link rel="stylesheet" href="./styles/modal-popup.css" />
+    <title>Diva | Admin Dashboard</title>
+  </head>
+  <body>
+    <div id="main_container">
+      <div id="lhs">
+        <div id="title_div">
+          <div id="logo">
+            <img src="../assets/logo.png" alt="" />
+          </div>
+          <h4>Diva Admin</h4>
+        </div>
+        <div id="link_div">
+          <div id="products_div" class="link_item link_active">
+            <i class="fa-solid fa-tags"></i>
+            <p>Products</p>
+          </div>
+          <div id="orders_div" class="link_item">
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+            <p>Orders</p>
+          </div>
+          <div id="customers_div" class="link_item">
+            <i class="fa-solid fa-user"></i>
+            <p>Customers</p>
+          </div>
+          <div id="discounts_div" class="link_item">
+            <i class="fa-solid fa-percent"></i>
+            <p>Discounts</p>
+          </div>
+        </div>
+      </div>
+      <div id="rhs">
+        <div id="navbar">
+          <div id="admin_icon_div">
+            <span></span>
+            <div id="logout_drop">
+              <div class="icon_line">
+                <i class="fa-solid fa-user-shield"></i>
+                <span id="username"></span>
+              </div>
+              <div id="logout_btn" class="icon_line">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Logout</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="rhs_body">
+          <div id="products_page" class="page active">
+            <div class="header">
+              <h4>Products</h4>
+              <button id="add_product" class="btn">New Product</button>
+              <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <select id="new_prod_category">
+                    <option value="skincare">Skincare</option>
+                    <option value="fragrance">Fragrance</option>
+                    <option value="hair">Hair</option>
+                  </select>
+                  <input
+                    type="text"
+                    id="new_prod_name"
+                    placeholder="Add Product Name"
+                    required
+                  />
+                  <input
+                    type="text"
+                    id="new_prod_img"
+                    placeholder="Add Image Address"
+                    required
+                  />
+                  <input
+                    type="number"
+                    id="new_prod_price"
+                    placeholder="Add Product Price"
+                    required
+                  />
+                  <input
+                    type="text"
+                    id="new_prod_brandName"
+                    placeholder="Add Brand Name"
+                    required
+                  />
+                  <input
+                    type="number"
+                    id="new_prod_quantity"
+                    placeholder="Add Quantity"
+                    required
+                  />
+                  <input
+                    type="text"
+                    id="new_prod_description"
+                    placeholder="Add Description"
+                    required
+                  />
+                  <button id="add_new_product">Add Product</button>
+                </div>
+              </div>
+            </div>
+            <div class="action_div">
+              <div>
+                <button class="btn cat_btn link_active" id="skin_btn">
+                  SKINCARE
+                </button>
+                <button class="btn cat_btn" id="frag_btn">FRAGRANCE</button>
+                <button class="btn cat_btn" id="hair_btn">HAIR</button>
+              </div>
+              <div>
+                <select id="filter_Prod" class="btn">
+                  <option value="">Filter By</option>
+                  <option value="active">Active</option>
+                  <option value="inactive">Inactive</option>
+                  <option value="999">Less Than 999</option>
+                  <option value="1499">Less Than 1499</option>
+                  <option value="1999">More Than 1999</option>
+                </select>
+                <select id="sort_Prod" class="btn">
+                  <option value="">Sort By</option>
+                  <option value="asc">Low To High</option>
+                  <option value="desc">High To Low</option>
+                </select>
+              </div>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Image</th>
+                  <th>Name</th>
+                  <th>Inventory</th>
+                  <th>Price</th>
+                  <th>Status</th>
+                  <th>Remove</th>
+                </tr>
+              </thead>
+              <tbody id="product_tbody">
+                <!-- items row comes here -->
+              </tbody>
+            </table>
+          </div>
+          <div id="orders_page" class="page">
+            <!-- ************** -->
+            <h4>Orders</h4>
+            <div class="action_div">
+              <div></div>
+              <div>
+                <select id="filter_Prod" class="btn">
+                  <option value="">Filter By</option>
+                  <option value="active">Active</option>
+                  <option value="inactive">Inactive</option>
+                  <option value="999">Less Than 999</option>
+                  <option value="1499">Less Than 1499</option>
+                  <option value="1999">More Than 1999</option>
+                </select>
+                <select id="sort_Prod" class="btn">
+                  <option value="">Sort By</option>
+                  <option value="asc">Low To High</option>
+                  <option value="desc">High To Low</option>
+                </select>
+              </div>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Order</th>
+                  <th>Customer</th>
+                  <th>Date Added</th>
+                  <th>Fulfillment</th>
+                  <th>Payment Status</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody id="product_tbody">
+                <!-- items row comes here -->
+              </tbody>
+            </table>
+            <!-- ************** -->
+          </div>
+          <div id="customers_page" class="page">
+            <h4>Customers</h4>
+            <div class="action_div">
+              <div>
+                <input
+                  type="text"
+                  id="search_user"
+                  class="btn"
+                  placeholder="Search User"
+                />
+                <button id="search_user_btn" class="btn">search</button>
+              </div>
+              <div>
+                <select id="sort_cus" class="btn">
+                  <option value="">Sort By</option>
+                  <option value="asc">A-Z</option>
+                  <option value="desc">Z-A</option>
+                </select>
+              </div>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Phone</th>
+                  <th>Email</th>
+                  <th>Password</th>
+                  <th>Remove</th>
+                </tr>
+              </thead>
+              <tbody id="customer_tbody">
+                <!-- items row comes here -->
+              </tbody>
+            </table>
+          </div>
+          <div id="discounts_page" class="page">
+            <h4>Discounts</h4>
+            <div class="action_div">
+              <div>
+                <input
+                  type="text"
+                  id="search_coupon"
+                  class="btn"
+                  placeholder="Search Coupon Code"
+                />
+                <button id="search_coupon_btn" class="btn">search</button>
+              </div>
+              <div>
+                <button id="add_coupon" class="btn">
+                  <i class="fa-solid fa-plus"></i>
+                  <span>Add Coupon</span>
+                </button>
+              </div>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Description</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Remove</th>
+                </tr>
+              </thead>
+              <tbody id="coupons_tbody">
+                <!-- items row comes here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script type="module" src="./scripts/dashboard.js"></script>
+<script type="module" src="./scripts/modal-popup.js"></script>
+<script type="module" src="./scripts/customer.js"></script>
+<script type="module" src="./scripts/discounts.js"></script>
