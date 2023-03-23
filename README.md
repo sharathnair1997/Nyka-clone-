@@ -63,25 +63,3 @@
 
 </ul>
 
-## Contributors
-
-#### Ayush Gupta
-> Github: [ayushgupta1324](https://github.com/ayushgupta1324)
-Worked on Cart and Checkout page
-
-### Kishan Joshi
-> Github: [Kishan0431](https://github.com/Kishan0431)
-Worked on Sidebar on Homepage and Product Page along with sorting functionality
-
-### Pranay Jadhao
-> Github: [PranayJadhao](https://github.com/PranayJadhao)
-Worked on Product Page and single Product card
-
-### Mohit Bansal
-> Github: [mhtbansal11](https://github.com/mhtbansal11)
-Worked on navbar, homepage, footer and Backend API
-
-### ABHISEK KUMAR
-> Github: [Abhisek753](https://github.com/Abhisek753)
-Worked on Login and Signup using firebase
-
