@@ -10,7 +10,7 @@
 # Technology
 
 
-- **Client:** HTML, CSS, JS, React, Redux, ChakraUI, Firebase
+- **Client:** HTML, CSS, JS
 
 - **Server:** Netlify and Cyclic
 
@@ -22,44 +22,5 @@
 
 -User can easily order the product from our website
 
-## Below are some of the Screenshots with features:
-<ul>
-    <li>
-     <div>
-         <h4>homepage</h4>
-         <img src="https://i.postimg.cc/4ykjsJts/Screenshot-20230123-115844.png" alt=" homepage"/>
-     </div>
-    </li>
-    <li>
-     <div>
-         <h4>Login </h4>
-         <img src="https://i.postimg.cc/j5FdXnGv/Screenshot-20230123-115651.png" alt="login"/>
-     </div>
-    </li> 
-    <li>
-     <div>
-         <h4>Signup</h4>
-         <img src="https://i.postimg.cc/3RdDYhhS/Screenshot-20230123-115630.png" alt="signup"/>
-     </div>
-    </li> 
-    <li>
-     <div>
-         <h4>Product Page</h4>
-         <img src="https://i.postimg.cc/cLxCdWMR/Screenshot-20230123-115615.png" alt="product page"/>
-     </div>
-    </li> 
-    <li>
-     <div>
-         <h4>Cart Page</h4>
-         <img src="https://i.postimg.cc/KjbFQ70P/Screenshot-20230123-115801.png" alt="cart"/>
-     </div>
-    </li> 
-    <li>
-     <div>
-         <h4>Checkout Page</h4>
-         <img src="https://i.postimg.cc/j5HYWwRL/Screenshot-20230123-115819.png" alt="checkout"/>
-     </div>
-    </li> 
 
-</ul>
 
